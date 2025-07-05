@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Activities - Gurama, Auwal Umar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155;
+            line-height: 1.6;
+            padding-top: 5rem; /* Space for fixed navbar if you add one */
+        }
+        * {
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+     <!-- Navigation Bar -->
+    <nav class="bg-white py-4 px-6 fixed w-full z-10 top-0 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Site Title / Logo -->
+            <a href="#home" class="text-2xl font-bold text-gray-800 hover:text-blue-700 transition duration-300 rounded-md p-2">Gurama, Auwal Umar</a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation Links -->
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                <a href="index.html#home" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Home</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">About</a>
+                <a href="#experience" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Experience</a>
+                <a href="#education" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Education</a>
+                <a href="./activities.html" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Activities</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 mt-2 rounded-lg shadow-lg">
+            <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">About</a>
+            <a href="#experience" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Experience</a>
+            <a href="#education" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Education</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Optional: You can copy your main site's navbar here if you want consistent navigation -->
+    <!-- For simplicity, I'm omitting it in this standalone file for now -->
+
+    <div class="container mx-auto p-8 lg:p-12 mt-8 mb-8 bg-white ">
+        <h1 class="text-4xl font-bold text-gray-800 mb-10 text-center">My Activities</h1>
+
+        <!-- Activities List Container -->
+        <div id="activities-container" class="grid grid-cols-1 md:grid-cols-1 gap-8">
+            <!-- Activities will be loaded here by main.js -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div id="pagination-container" class="flex justify-center items-center mt-12 space-x-2">
+            <!-- Pagination buttons will be loaded here by main.js -->
+        </div>
+    </div>
+
+    <!-- Link to your data and main JavaScript files -->
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+</html>

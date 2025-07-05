@@ -3,26 +3,571 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>webalb's Personal Website</title>
+    <title>Gurama, Auwal Umar - Academic & Industry Profile</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (e.g., social media, download) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Custom styles for the Inter font and general body styling */
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* White background as requested */
+            color: #334155; /* Darker text color for readability */
+            line-height: 1.6;
+            padding-top: 5rem; /* Adjust body padding to account for fixed navbar height */
         }
-        h1 {
-            color: #0056b3;
+        /* Ensure all elements have rounded corners */
+        * {
+            border-radius: 0.5rem; /* Apply rounded corners to all elements by default */
         }
-        p {
-            font-size: 1.1em;
+        /* Specific override for images to maintain circular shape if needed */
+        .rounded-full {
+            border-radius: 9999px; /* Full circle for profile image */
+        }
+        /* Ensure smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the active navigation link */
+        .nav-link.active {
+            font-weight: 700; /* Bold */
+            color: #1d4ed8; /* Darker blue */
         }
     </style>
 </head>
-<body>
-    <h1>Welcome to webalb's Personal Website!</h1>
-    <p>This is a placeholder page. Your website is now live!</p>
-    <p>You can start designing your amazing academic and industry portfolio here.</p>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white py-4 px-6 fixed w-full z-10 top-0 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Site Title / Logo -->
+            <a href="#home" class="text-2xl font-bold text-gray-800 hover:text-blue-700 transition duration-300 rounded-md p-2">Gurama, Auwal Umar</a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation Links -->
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Home</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">About</a>
+                <a href="#experience" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Experience</a>
+                <a href="#education" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Education</a>
+                <a href="./activities.html" class="nav-link text-gray-600 hover:text-blue-700 transition duration-300 rounded-md p-2">Activities</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 mt-2 rounded-lg shadow-lg">
+            <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">About</a>
+            <a href="#experience" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Experience</a>
+            <a href="#education" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Education</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container mx-auto p-8 lg:p-12 mt-8 mb-8 bg-white " id="home">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+            <!-- Left Column: Profile Info -->
+            <div class="lg:col-span-1 flex flex-col items-center text-center lg:items-start lg:text-left">
+                <!-- Profile Image -->
+                <img src="./images/me.jpg" alt="Your Photo"
+                     class="w-40 h-40 rounded-full object-cover mb-6 border-4 border-blue-500 shadow-lg">
+
+                <!-- Name and Title -->
+                <h3 class="text-2xl font-bold text-gray-800 mb-2 ">Gurama, Auwal Umar</h1>
+                <p class="text-xl text-gray-600 mb-4">Cybersecurity with AI Researcher</p>
+                <p class="text-lg text-gray-500 mb-6">Gombe State University</p>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 mb-8">
+                    <a href="mailto:your.email@example.com" class="text-gray-600 hover:text-blue-600 transition duration-300 text-2xl" aria-label="Email">
+                        <i class="fas fa-at"></i> <!-- Email icon -->
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-600 hover:text-blue-600 transition duration-300 text-2xl" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-gray-600 hover:text-blue-600 transition duration-300 text-2xl" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i> <!-- LinkedIn icon -->
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="text-gray-600 hover:text-blue-600 transition duration-300 text-2xl" aria-label="GitHub">
+                        <i class="fab fa-github"></i> <!-- GitHub icon -->
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=yourid" target="_blank" class="text-gray-600 hover:text-blue-600 transition duration-300 text-2xl" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i> <!-- Google Scholar icon -->
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: About, Interests, Education -->
+            <div class="lg:col-span-2">
+                <!-- About Me Section -->
+                <div class="mb-10" id="about">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Gurama, Auwal Umar is a Cybersecurity with AI Researcher at Gombe State University. His
+                        research interests include distributed robotics, mobile computing and programmable
+                        matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring
+                        robots, systems of self-organizing robots, and mobile sensor networks.
+                    </p>
+                    <a href="#" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md">
+                        <i class="fas fa-download mr-3"></i> Download CV
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Interests Section -->
+                    <div id="interests">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Interests</h2>
+                        <ul class="list-none space-y-3 text-lg text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-blue-500 text-xs mr-3"></i> Artificial Intelligence
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-blue-500 text-xs mr-3"></i> Post-Quantum Cryptography
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-blue-500 text-xs mr-3"></i> Homomorphic Encryption
+                            </li>
+                            <!-- Add more interests as needed -->
+                        </ul>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div id="education">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Education</h2>
+                        <ul class="list-none space-y-4 text-lg text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-blue-500 text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold">BSc Computer Science</p>
+                                    <p class="text-gray-600">Gombe State University</p>
+                                    <p class="text-gray-600 italic text-sm">CGPA 4.83/5.00</p>
+                                    <p class="text-gray-600 text-sn">October 2018 – May 2024 </p>
+                                </div>
+                            </li>
+                            <!-- Add more education entries as needed -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Professional Experience Section -->
+    <div class="container mx-auto p-8 lg:p-12 mt-4 mb-8 bg-white" id="experience">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Professional Experience</h2>
+
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4"> <i class="fas fa-briefcase text-blue-600 text-2xl mr-4 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Cybersecurity Officer (NYSC)</h3>
+                    <p class="text-lg text-gray-600">National Information Technology Development Agency (NITDA), Headquarters, Abuja, Nigeria</p>
+                    <p class="text-md text-gray-500 mt-1">September 2024 – Present</p> </div>
+            </div>
+            <ul class="list-disc space-y-2 text-gray-700 pl-12"> <li>Conducted vulnerability assessments on government MDAs' websites; identified vulnerabilities and reported findings for recommendation formulation.</li>
+                <li>Conducted in-depth threat research; contributed to Cybersecurity Advisory Reports on new vulnerabilities and emerging threats for CERRT.</li>
+                <li>Monitored Nigerian MDAs' servers for security breaches; analyzed incidents and provided actionable recommendations.</li>
+                <li>Authored and maintained departmental meeting minutes.</li>
+            </ul>
+            <p class="text-md text-gray-600 mt-6 font-semibold">Skills: <span class="font-normal">Minute Writing, Threat Research, Cyber Monitoring, Cybersecurity Awareness Campaign</span></p> </div>
+
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4"> <i class="fas fa-briefcase text-blue-600 text-2xl mr-4 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">IT Staff Assistant (Intern)</h3>
+                    <p class="text-lg text-gray-600">National Information Technology Development Agency (NITDA), North East Zonal Office, Gombe State, Nigeria</p>
+                    <p class="text-md text-gray-500 mt-1">March 2022 – September 2022</p> </div>
+            </div>
+            <ul class="list-disc space-y-2 text-gray-700 pl-12"> <li>Led initiative to connect over 200 PCs to central local server, enhancing network efficiency.</li>
+                <li>Spearheaded technical team for Nigerian Police Force capacity building, training over 100 officers in IT skills.</li>
+                <li>Mentored technical interns on career development in software development, cybersecurity, and AI/ML.</li>
+            </ul>
+            <p class="text-md text-gray-600 mt-6 font-semibold">Skills: <span class="font-normal">Presentation Paper Writing, Interns Mentoring, Technical System Maintenance, Project Management</span></p> </div>
+
+    </div>
+            
+    <!-- Spoken Language Section (New) -->
+    <div class="container mx-auto p-8 lg:p-12 mt-4 mb-8 bg-white" id="lan">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Spoken Language</h2>
+        <ul class="list-none space-y-4 text-lg text-gray-700">
+            <li class="flex items-center">
+                <div class="w-24 font-semibold">English</div>
+                <div class="flex-1 bg-gray-200 rounded-full h-2.5 ml-4">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 100%;"></div>
+                </div>
+                <span class="ml-4 text-gray-600">100%</span>
+            </li>
+            <li class="flex items-center">
+                <div class="w-24 font-semibold">Hausa</div>
+                <div class="flex-1 bg-gray-200 rounded-full h-2.5 ml-4">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 100%;"></div>
+                </div>
+                <span class="ml-4 text-gray-600">100%</span>
+            </li>
+            <li class="flex items-center">
+                <div class="w-24 font-semibold">Arabic</div>
+                <div class="flex-1 bg-gray-200 rounded-full h-2.5 ml-4">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%;"></div>
+                </div>
+                <span class="ml-4 text-gray-600">25%</span>
+            </li>
+        </ul>
+    </div>
+    <div class="container mx-auto p-8 lg:p-12 mt-4 mb-8 bg-white" id="projects">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Selected Projects</h2>
+
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4">
+                <i class="fas fa-folder-open text-blue-600 text-2xl mr-4 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Cybersecurity AI Chatbot & Advisory Agent</h3>
+                    <p class="text-lg text-gray-600">
+                        <a href="https://github.com/Abuhurairaa/aichatbot" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a> (Private)
+                    </p>
+                </div>
+            </div>
+            <ul class="list-disc space-y-2 text-gray-700 pl-12">
+                <li>Co-developing an AI chatbot for cybersecurity questions in the Nigerian context; currently in beta-testing.</li>
+                <li>Automates threat research and generates advisory reports, projected to reduce manual tasks by over 80% for NITDA-CERRT activities.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4">
+                <i class="fas fa-folder-open text-blue-600 text-2xl mr-4 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Fincoop - Cooperative Finance Management Software</h3>
+                    <p class="text-lg text-gray-600">
+                        <a href="https://github.com/webalb/fincoop" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a> (Private)
+                    </p>
+                </div>
+            </div>
+            <ul class="list-disc space-y-2 text-gray-700 pl-12">
+                <li>Developed a Django-based cooperative management software for contributions, withdrawals, loans, and target savings management.</li>
+                <li>Contributed to a 90% increase in user onboarding during the first 30 days of deployment for one customer.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4">
+                <i class="fas fa-folder-open text-blue-600 text-2xl mr-4 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Noaphp - PHP Micro Framework</h3>
+                    <p class="text-lg text-gray-600">
+                        <a href="https://github.com/noaphp" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a>
+                    </p>
+                </div>
+            </div>
+            <ul class="list-disc space-y-2 text-gray-700 pl-12">
+                <li>Developed a lightweight PHP micro framework emphasizing efficiency and ease of use for simplified web application development.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4">
+                <i class="fas fa-folder-open text-blue-600 text-2xl mr-4 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Smart Trash Bin Simulation</h3>
+                    <p class="text-lg text-gray-600">
+                        <a href="https://github.com/webalb/smartbinSimulation" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a>
+                    </p>
+                </div>
+            </div>
+            <ul class="list-disc space-y-2 text-gray-700 pl-12">
+                <li>Co-developed a Smart Trash Bin Simulation using Node-RED, MQTT broker, and a web page interface for intelligent waste management.</li>
+            </ul>
+        </div>
+
+       
+
+    </div>
+
+    <!-- Achievements & Awards Section -->
+    <div class="container mx-auto p-8 lg:p-12 mt-4 mb-8 bg-white" id="achievements">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Achievements & Awards</h2>
+
+        <!-- Achievement Item 1: Award of Excellence -->
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4">
+                <i class="fas fa-award text-blue-600 text-2xl mr-4 mt-1"></i> <!-- Award icon -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Award of Excellence: Overall Best Graduating Student</h3>
+                    <p class="text-lg text-gray-600">(Department of Computer Science)</p>
+                    <p class="text-md text-gray-500 mt-1">MSSN GSU Chapter (2023)</p>
+                </div>
+            </div>
+            <ul class="list-disc space-y-2 text-gray-700 pl-12">
+                <li>Recognized for outstanding academic achievements in Computer Science.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Publications Section -->
+    <div class="container mx-auto p-8 lg:p-12 mt-4 mb-8 bg-white" id="publications">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Articles & Publications</h2>
+
+        <!-- Publication Item 1: Development of a New Minimalistic PHP Micro Framework: NOAPHP -->
+        <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-start mb-4">
+                <i class="fas fa-book text-blue-600 text-2xl mr-4 mt-1"></i> <!-- Book icon for publications -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Development of a New Minimalistic PHP Micro Framework: NOAPHP</h3>
+                    <p class="text-lg text-gray-600">
+                        Ahmed, M. K., <b>Gurama, A. U.</b>, & Dawaki, M. (2024).
+                    </p>
+                    <p class="text-md text-gray-500 mt-1">
+                        Bima Journal of Science and Technology .
+                    </p>
+                    <p class="text-md mt-2">
+                        <a href="https://journals.gjbeacademia.com/index.php/bimajst/article/view/772" target="_blank" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt text-sm mr-2"></i> View Publication
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+         <!-- Publication Item 2: Homomorphic Encryption – Unlocking a New Era of Privacy-Preserving Computation -->
+    <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+        <div class="flex items-start mb-4">
+            <i class="fab fa-linkedin text-blue-600 text-2xl mr-4 mt-1"></i> <!-- LinkedIn icon for article -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Homomorphic Encryption – Unlocking a New Era of Privacy-Preserving Computation</h3>
+                <p class="text-lg text-gray-600">
+                    Gurama, A. U. (2025).
+                </p>
+                <p class="text-md mt-2">
+                    <a href="https://www.linkedin.com/pulse/homomorphic-encryption-unlocking-new-era-computation-auwal-gurama-onjjf/?trackingId=Yl1yW8obde9yUhxxSdAkRg%3D%3D" target="_blank" class="text-blue-600 hover:underline flex items-center">
+                        <i class="fas fa-external-link-alt text-sm mr-2"></i> Read on LinkedIn
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Skills and Competence Section -->
+<div class="container mx-auto p-8 lg:p-12 mt-4 mb-8 bg-white" id="skills">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">SKILLS AND COMPETENCE</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+        <!-- Technical Skills (Hard Skills) -->
+        <div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Technical Skills</h3>
+            <ul class="list-none space-y-3 text-lg text-gray-700">
+                <li class="flex items-center">
+                    <i class="fas fa-laptop-code text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Programming Languages:</p>
+                        <p class="text-gray-600">Python, PHP, JavaScript, C/C++</p>
+                    </div>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-globe text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Web Development:</p>
+                        <p class="text-gray-600">HTML, CSS, React.js, MySQL, Django</p>
+                    </div>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Cybersecurity (Basics):</p>
+                        <p class="text-gray-600">Threat research, Cyber monitoring, Vulnerability assessment, Cryptography</p>
+                    </div>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-tools text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Tools & Technologies:</p>
+                        <p class="text-gray-600">Git, Docker, Node-RED, MQTT</p>
+                    </div>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-cogs text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Software Development:</p>
+                        <p class="text-gray-600">Agile methodologies, Lean approach</p>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+
+        <!-- Professional Skills (Soft Skills) -->
+        <div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Professional Skills</h3>
+            <ul class="list-none space-y-3 text-lg text-gray-700">
+                <li class="flex items-center">
+                    <i class="fas fa-comments text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Communication:</p>
+                        <p class="text-gray-600">Strong written and verbal skills, proficient in technical reports and documentation.</p>
+                    </div>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-lightbulb text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Problem Solving:</p>
+                        <p class="text-gray-600">Critical thinker with a proactive approach to identifying solutions.</p>
+                    </div>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-sync-alt text-blue-600 text-xl mr-3"></i> 
+                    <div>
+                        <p class="font-semibold">Adaptability:</p>
+                        <p class="text-gray-600">Quick to learn new technologies, adaptable to changing project needs.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Certifications Section -->
+<div class="container mx-auto p-8 lg:p-12 mt-4 mb-8 bg-white" id="certifications">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Certifications</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6"> <!-- Grid for two columns -->
+        <!-- Certification Item 1: PCAP -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">PCAP: Programming Essentials in Python</p>
+                <p class="text-gray-600 text-md">Cisco & OpenEDG | August 2022</p>
+            </div>
+        </div>
+
+        <!-- Certification Item 2: JavaScript Essentials 1 (JSE) -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">JavaScript Essentials 1 (JSE)</p>
+                <p class="text-gray-600 text-md">Cisco & OpenEDG | August 2022</p>
+            </div>
+        </div>
+
+        <!-- Certification Item 3: Cybersecurity Essentials -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">Cybersecurity Essentials</p>
+                <p class="text-gray-600 text-md">Cisco Networking Academy | August 2022</p>
+            </div>
+        </div>
+
+        <!-- Certification Item 4: Endpoint Security -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">Endpoint Security</p>
+                <p class="text-gray-600 text-md">Cisco Networking Academy | March 2025</p>
+            </div>
+        </div>
+
+        <!-- Certification Item 5: Microsoft IT Support Specialist -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">Microsoft IT Support Specialist</p>
+                <p class="text-gray-600 text-md">Coursera | April 2025</p>
+            </div>
+        </div>
+        <!-- Certification Item 5: Agile Project Management -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">Agile Project Management</p>
+                <p class="text-gray-600 text-md">HP Foundation | April 2025</p>
+            </div>
+        </div>
+        <!-- Certification Item 5: IBM DevOps & Software Engineering -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">IBM DevOps & Software Engineering</p>
+                <p class="text-gray-600 text-md">Coursera | (In Review)</p>
+            </div>
+        </div>
+        <!-- Certification Item 5: IBM Cybersecurity Analyst -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm flex items-start">
+            <i class="fas fa-certificate text-blue-600 text-xl mr-3 mt-1"></i>
+            <div>
+                <p class="font-semibold text-lg text-gray-800">IBM Cybersecurity Analyst</p>
+                <p class="text-gray-600 text-md">Coursera | (In Review)</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    <!-- Contact Section (Placeholder for future use with navbar link) -->
+    <section id="contact" class="hidden">
+        <!-- This section will be populated later -->
+    </section>
+
+    <!-- JavaScript for Mobile Menu Toggle and Active Nav Link -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('div[id], section[id]'); // Select all elements with an ID
+
+            // Mobile Menu Toggle
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Highlight active navigation link based on scroll position
+            function highlightNavLink() {
+                let current = '';
+                // Get the scroll position from the top of the viewport
+                const scrollY = window.pageYOffset;
+
+                sections.forEach(section => {
+                    // Get the top offset of each section relative to the document
+                    const sectionTop = section.offsetTop - 100; // Offset for fixed header height
+                    const sectionHeight = section.offsetHeight;
+
+                    // Check if the current scroll position is within the section
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    // Check if the link's href matches the current section ID
+                    if (link.href.includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Initial highlight and on scroll
+            highlightNavLink();
+            window.addEventListener('scroll', highlightNavLink);
+        });
+    </script>
+
 </body>
 </html>
